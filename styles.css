@@ -31,6 +31,75 @@ body {
   background: #1e40af;
   color: #ffffff;
 }
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.auth-links {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Base button style */
+.auth-links .btn {
+    text-decoration: none;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 30px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Login button */
+.auth-links .login {
+    color: #2563eb;
+    border-color: #2563eb;
+    background: transparent;
+}
+
+.auth-links .login:hover {
+    background: #2563eb;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+/* Register button */
+.auth-links .register {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #fff;
+}
+
+.auth-links .register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
+}
+
+/* Active click effect */
+.auth-links .btn:active {
+    transform: scale(0.97);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    .auth-links {
+        flex-direction: column;
+    }
+
+    .auth-links .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
 /* Subtle underline animation */
 .navbar nav a::after {
   content: "";
